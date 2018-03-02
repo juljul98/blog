@@ -4,6 +4,10 @@
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
+RewriteRule ^user-login /wp-login.php [QSA,L]
+RewriteRule ^user-login/?action=lostpassword /wp-login.php?action=lostpassword [QSA,L]
+RewriteRule ^user-login/?action=register /wp-login.php?action=register [QSA,L]
+RewriteRule ^user-login/?action=logout /wp-login.php?action=logout [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
