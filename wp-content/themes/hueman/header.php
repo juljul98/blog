@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
@@ -6,7 +7,10 @@
   <link rel="profile" href="<?php echo esc_url( 'gmpg.org/xfn/11' ); ?>">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-  <?php wp_head(); ?>
+  <?php
+
+   wp_head(); 
+   ?>
 </head>
 
 <body <?php body_class(); ?>>

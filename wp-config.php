@@ -78,7 +78,8 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
-
+define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_options' );
+define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_options' );
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
