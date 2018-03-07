@@ -1,4 +1,9 @@
-<?php while ( have_posts() ): the_post(); ?>
+
+<?php
+
+
+ while r_meta( 'description' ) ): ?>
+  <div class="author-bio">( have_posts() ): the_post(); ?>
   <article <?php post_class(); ?>>
     <div class="post-inner group">
 
@@ -7,7 +12,7 @@
       <?php if( get_post_format() ) { get_template_part('parts/post-formats'); } ?>
 
       <div class="clear"></div>
-
+    <?php do_shortcode('featured-video-plus'); ?>
       <div class="<?php echo implode( ' ', apply_filters( 'hu_single_entry_class', array('entry','themeform') ) ) ?>">
         <div class="entry-inner">
           <?php the_content(); ?>
@@ -35,8 +40,7 @@
 
 <?php the_tags('<p class="post-tags"><span>'.__('Tags:','hueman').'</span> ','','</p>'); ?>
 
-<?php if ( ( hu_is_checked( 'author-bio' ) ) && get_the_author_meta( 'description' ) ): ?>
-  <div class="author-bio">
+<?php if ( ( hu_is_checked( 'author-bio' ) ) && get_the_autho
     <div class="bio-avatar"><?php echo get_avatar( get_the_author_meta('user_email'),'128' ); ?></div>
     <p class="bio-name"><?php the_author_meta('display_name'); ?></p>
     <p class="bio-desc"><?php the_author_meta('description'); ?></p>
